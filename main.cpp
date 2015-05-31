@@ -10,16 +10,16 @@ int main(int argc, char *argv[])
 
     QtQuick2ApplicationViewer viewer;
 
-    viewer.setMainQmlFile(QStringLiteral("qml/machinesLobby/main.qml"));
+    viewer.setMainQmlFile(QStringLiteral("qml/machinesLobby/login.qml"));
     viewer.showExpanded();
 
     QScreen* screen = app.primaryScreen();
     const QRect mainScreenSize = screen->availableGeometry();
 
-    int width = mainScreenSize.width() * .7;
-    int height = mainScreenSize.height() * .7;
+    //int width = mainScreenSize.width() * .7;
+    //int height = mainScreenSize.height() * .7;
 
-    viewer.resize(width, height);
+    //viewer.resize(width, height);
 
     viewer.setFlags(Qt::FramelessWindowHint);
 

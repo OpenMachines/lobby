@@ -20,9 +20,13 @@ Rectangle {
     }
 
     Text {
-        x: 666
-        y: 447
-        text: qsTr("Hello World")
+        id: text1
+        x: 49
+        y: 3
+        text: "Hello World"
+        verticalAlignment: Text.AlignVCenter
+        anchors.verticalCenterOffset: -390
+        anchors.horizontalCenterOffset: -564
         visible: true
         anchors.centerIn: parent
     }
@@ -46,11 +50,12 @@ Rectangle {
 
     MouseArea {
         id: topBarMouseArea
-        width: 1280
         height: 46
+        anchors.right: parent.right
+        anchors.rightMargin: 8
         visible: true
         anchors.left: parent.left
-        anchors.leftMargin: 0
+        anchors.leftMargin: 218
         anchors.top: parent.top
         anchors.topMargin: 0
 
@@ -71,10 +76,10 @@ Rectangle {
 
     Image {
         id: logo
-        x: 8
-        y: 10
-        width: 30
-        height: 30
+        x: 3
+        y: 3
+        width: 40
+        height: 40
         visible: true
         source: "images/OMLogoFinal.png"
     }
