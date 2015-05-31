@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 Rectangle {
     id: rectangle1
-    width: 600
+    width: 500
     height: 800
     color:"transparent"
     border.width: 0
@@ -21,11 +21,11 @@ Rectangle {
     }
 
     Text {
-        id: text1
-        x: 93
-        y: 8
-        width: 415
-        height: 30
+        id: header
+        x: 0
+        y: 0
+        width: 500
+        height: 46
         text: qsTr("OM LAUNCHER")
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
@@ -60,10 +60,12 @@ Rectangle {
 
     Image {
         id: logo
-        x: 3
-        y: 3
         width: 40
         height: 40
+        anchors.top: parent.top
+        anchors.topMargin: 3
+        anchors.left: parent.left
+        anchors.leftMargin: 3
         visible: true
         source: "images/OMLogoFinal.png"
     }
@@ -114,7 +116,7 @@ Rectangle {
 
     Image {
         id: usernameInput
-        x: 119
+        x: 69
         y: 0
         anchors.topMargin: 248
         anchors.top: parent.top
@@ -152,7 +154,7 @@ Rectangle {
 
     Image {
         id: passwordInput
-        x: 119
+        x: 69
         y: -2
         source: "images/inputField.png"
         Text {
@@ -189,16 +191,12 @@ Rectangle {
 
     Image {
         id: loginButton
-        x: 238
+        x: 69
+        y: 591
         width: 362
-        anchors.top: parent.top
-        anchors.topMargin: 658
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 89
-        anchors.left: parent.left
-        anchors.leftMargin: 119
-        anchors.right: parent.right
-        anchors.rightMargin: 119
+        height: 52
+        anchors.verticalCenterOffset: 217
+        anchors.verticalCenter: parent.verticalCenter
         source: "images/button.png"
 
         Text {
@@ -217,6 +215,52 @@ Rectangle {
             verticalAlignment: Text.AlignVCenter
             wrapMode: Text.WordWrap
             font.pixelSize: 33
+        }
+
+        MouseArea {
+            id: loginMouseArea
+            x: 0
+            y: 0
+            width: 362
+            height: 53
+        }
+    }
+
+    Image {
+        id: createAccountButton
+        x: 71
+        y: 679
+        width: 360
+        height: 52
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 70
+        source: "images/button.png"
+        Text {
+            id: createAccount
+            color: "#b11818"
+            text: qsTr("CREATE ACCOUNT")
+            wrapMode: Text.WordWrap
+            horizontalAlignment: Text.AlignHCenter
+            anchors.bottomMargin: 8
+            anchors.right: parent.right
+            verticalAlignment: Text.AlignVCenter
+            font.pixelSize: 33
+            anchors.rightMargin: 8
+            anchors.leftMargin: 8
+            anchors.topMargin: 8
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.bottom: parent.bottom
+        }
+
+        MouseArea {
+            id: createAccountMouseArea
+            x: 0
+            y: 0
+            width: 362
+            height: 53
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
         }
     }
 

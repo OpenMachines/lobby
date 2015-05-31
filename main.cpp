@@ -4,9 +4,22 @@
 #include <QQuickItem>
 #include <QtQml/QQmlContext>
 
+#include <QtSql>
+//#include <QtCore/QCoreApplication>
+#include <QtDebug>
+
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
+
+    QString servername = "LOCALHOST";
+    QString dbname = "machines_users";
+
+    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
+
+    db.setConnectOptions();
+
+    //QString dsn = QString
 
     QtQuick2ApplicationViewer viewer;
 
