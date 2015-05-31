@@ -3,21 +3,31 @@
 #include <QScreen>
 #include <QQuickItem>
 #include <QtQml/QQmlContext>
-
 #include <QtSql>
-//#include <QtCore/QCoreApplication>
 #include <QtDebug>
+#include <QtSql/QSqlDriver>
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    QString servername = "LOCALHOST";
-    QString dbname = "machines_users";
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setHostName("localhost");
+    db.setPort(7777);
+    db.setDatabaseName("machines_users");
+    db.setUserName("root");
+    db.setPassword("");
+    bool ok = db.open();
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
+    qDebug() << ok;
+    //cout << "test";
 
-    db.setConnectOptions();
+//    QString servername = "LOCALHOST";
+//    QString dbname = "machines_users";
+
+//    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
+
+//    db.setConnectOptions();
 
     //QString dsn = QString
 
