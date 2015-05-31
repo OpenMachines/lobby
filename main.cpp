@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
     viewer.setMainQmlFile(QStringLiteral("qml/machinesLobby/login.qml"));
     viewer.showExpanded();
 
+    viewer.setColor("transparent");
+
     QScreen* screen = app.primaryScreen();
     const QRect mainScreenSize = screen->availableGeometry();
 
