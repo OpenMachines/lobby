@@ -20,6 +20,9 @@ int main(int argc, char *argv[])
     bool ok = db.open();
 
     qDebug() << ok;
+
+
+
     //cout << "test";
 
 //    QString servername = "LOCALHOST";

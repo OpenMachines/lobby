@@ -18,6 +18,19 @@ Rectangle {
         fillMode: Image.Stretch
         visible: true
         source: "images/bg.png"
+
+        Image {
+            id: image1
+            x: 200
+            y: 74
+            width: 100
+            height: 100
+            anchors.verticalCenterOffset: -276
+            anchors.horizontalCenterOffset: 0
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
+            source: "images/eyes.png"
+        }
     }
 
     Text {
@@ -192,11 +205,11 @@ Rectangle {
     Image {
         id: loginButton
         x: 69
-        y: 591
+        y: 506
         width: 362
         height: 52
-        anchors.verticalCenterOffset: 217
-        anchors.verticalCenter: parent.verticalCenter
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 242
         source: "images/button.png"
 
         Text {
@@ -229,11 +242,11 @@ Rectangle {
     Image {
         id: createAccountButton
         x: 71
-        y: 679
+        y: 593
         width: 360
         height: 52
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 70
+        anchors.bottomMargin: 155
         source: "images/button.png"
         Text {
             id: createAccount
@@ -262,6 +275,44 @@ Rectangle {
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 0
         }
+    }
+
+    Image {
+        id: playOfflineButton
+        x: 71
+        y: 680
+        width: 360
+        height: 52
+        anchors.bottomMargin: 63
+        source: "images/button.png"
+        Text {
+            id: playOffline
+            color: "#b11818"
+            text: qsTr("PLAY OFFLINE")
+            anchors.bottomMargin: 8
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
+            anchors.right: parent.right
+            verticalAlignment: Text.AlignVCenter
+            font.pixelSize: 33
+            anchors.rightMargin: 8
+            anchors.leftMargin: 8
+            anchors.topMargin: 8
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.bottom: parent.bottom
+        }
+
+        MouseArea {
+            id: playOfflineMouseArea
+            x: 0
+            y: 0
+            width: 362
+            height: 53
+            anchors.bottomMargin: 0
+            anchors.bottom: parent.bottom
+        }
+        anchors.bottom: parent.bottom
     }
 
 }
