@@ -21,19 +21,6 @@ int main(int argc, char *argv[])
 
     qDebug() << ok;
 
-
-
-    //cout << "test";
-
-//    QString servername = "LOCALHOST";
-//    QString dbname = "machines_users";
-
-//    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
-
-//    db.setConnectOptions();
-
-    //QString dsn = QString
-
     QtQuick2ApplicationViewer viewer;
 
     viewer.setMainQmlFile(QStringLiteral("qml/machinesLobby/login.qml"));
