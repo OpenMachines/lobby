@@ -170,7 +170,7 @@ Rectangle {
                 clip: true
                 horizontalAlignment: TextInput.AlignLeft
                 font.family: sftransrobotics.name
-                font.pixelSize: 26
+                font.pixelSize: 26                
             }
 
 
@@ -205,7 +205,8 @@ Rectangle {
                 clip: true
                 font.pixelSize: 26
                 autoScroll: false
-                passwordCharacter: ""
+                passwordCharacter: "*"
+                echoMode: TextInput.Password
                 font.family: sftransrobotics.name
             }
         }
