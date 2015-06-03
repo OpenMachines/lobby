@@ -12,6 +12,13 @@ Rectangle {
     opacity: 1
     visible: true
 
+    FontLoader
+    {
+        id: sftransrobotics;
+        name: "SFTransRobotics";
+        source: "fonts/SFTransRobotics.ttf"
+    }
+
     Image {
         id: background
         anchors.fill: parent
@@ -42,6 +49,7 @@ Rectangle {
         text: qsTr("OM LAUNCHER")
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
+        font.family: sftransrobotics.name
         font.pixelSize: 25
     }
 
@@ -135,15 +143,19 @@ Rectangle {
         anchors.top: parent.top
         source: "images/inputField.png"
 
+
+
         Text {
             id: usernameHeader
             x: 0
             y: -36
             width: 362
-            height: 30
+            height: 30            
             color: "#ffffff"
             text: qsTr("USERNAME")
+            font.family: sftransrobotics.name
             font.pixelSize: 27
+
 
             TextInput {
                 id: usernameTextInput
@@ -157,6 +169,7 @@ Rectangle {
                 passwordCharacter: ""
                 clip: true
                 horizontalAlignment: TextInput.AlignLeft
+                font.family: sftransrobotics.name
                 font.pixelSize: 26
             }
 
@@ -178,6 +191,7 @@ Rectangle {
             height: 30
             color: "#ffffff"
             text: qsTr("PASSWORD")
+            font.family: sftransrobotics.name
             font.pixelSize: 27
             TextInput {
                 id: passwordTextInput
@@ -192,6 +206,7 @@ Rectangle {
                 font.pixelSize: 26
                 autoScroll: false
                 passwordCharacter: ""
+                font.family: sftransrobotics.name
             }
         }
         anchors.topMargin: 374
@@ -227,6 +242,7 @@ Rectangle {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             wrapMode: Text.WordWrap
+            font.family: sftransrobotics.name
             font.pixelSize: 33
         }
 
@@ -264,6 +280,7 @@ Rectangle {
             anchors.top: parent.top
             anchors.left: parent.left
             anchors.bottom: parent.bottom
+            font.family: sftransrobotics.name
         }
 
         MouseArea {
@@ -301,6 +318,7 @@ Rectangle {
             anchors.top: parent.top
             anchors.left: parent.left
             anchors.bottom: parent.bottom
+            font.family: sftransrobotics.name
         }
 
         MouseArea {

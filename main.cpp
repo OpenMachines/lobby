@@ -6,6 +6,7 @@
 #include <QtSql>
 #include <QtDebug>
 #include <QtSql/QSqlDriver>
+#include <QFontDatabase>
 
 int main(int argc, char *argv[])
 {
@@ -43,6 +44,8 @@ int main(int argc, char *argv[])
     // Access context to move window
     QQmlContext* context = viewer.rootContext();
     context->setContextProperty("viewerWindow", &viewer);
+
+
 
     return app.exec();
 }
