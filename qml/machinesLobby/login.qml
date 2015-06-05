@@ -10,7 +10,7 @@ Rectangle {
     //border.width: 1
     //z: 2147483645
     opacity: 1
-    visible: true
+    visible: true    
 
     FontLoader
     {
@@ -20,7 +20,7 @@ Rectangle {
     }
 
     Image {
-        id: background
+        id: background       
         anchors.fill: parent
         fillMode: Image.Stretch
         visible: true
@@ -177,7 +177,6 @@ Rectangle {
         }
     }
 
-
     Image {
         id: passwordInput
         x: 69
@@ -214,10 +213,6 @@ Rectangle {
         anchors.top: parent.top
     }
 
-
-
-
-
     Image {
         id: loginButton
         x: 69
@@ -246,9 +241,11 @@ Rectangle {
             font.family: sftransrobotics.name
             font.pixelSize: 33
         }
-
         MouseArea {
             id: loginMouseArea
+            objectName: "loginButton"
+            signal qmlSignal(string msg)
+            onClicked: qmlSignal("hi from qml")
             x: 0
             y: 0
             width: 362
