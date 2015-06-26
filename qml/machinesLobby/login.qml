@@ -66,13 +66,13 @@ Rectangle {
 
         property variant previousPosition
         onPressed: {
-            previousPosition = Qt.point(1, 1)
+            previousPosition = Qt.point(mouseX, mouseY)
         }
         onPositionChanged: {
             if (pressedButtons == Qt.LeftButton) {
-                var dx = mouseX - previousPosition.x
-                var dy = mouseY - previousPosition.y
-                var point = Qt.point(viewerWindow.x + dx, viewerWindow.y + dy)
+                var dx = mouseX  - previousPosition.x
+                var dy = mouseY  - previousPosition.y
+                var point = Qt.point(viewerWindow.x + dx, viewerWindow.y + dy)                                
                 viewerWindow.setX(point.x);
                 viewerWindow.setY(point.y);
             }
