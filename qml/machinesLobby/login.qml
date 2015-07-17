@@ -225,7 +225,7 @@ Rectangle {
 
         Text {
             id: login
-            color: "#b11818"
+            color: "#ffffff"
             text: qsTr("LOGIN")
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 8
@@ -264,7 +264,7 @@ Rectangle {
         source: "images/button.png"
         Text {
             id: createAccount
-            color: "#b11818"
+            color: "#ffffff"
             text: qsTr("CREATE ACCOUNT")
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter
@@ -302,7 +302,7 @@ Rectangle {
         source: "images/button.png"
         Text {
             id: playOffline
-            color: "#b11818"
+            color: "#ffffff"
             text: qsTr("PLAY OFFLINE")
             anchors.bottomMargin: 8
             horizontalAlignment: Text.AlignHCenter

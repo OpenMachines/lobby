@@ -4,6 +4,7 @@
 Listener::Listener(QObject *parent) :
     QObject(parent)
 {
+
 }
 
 void Listener::buttonClicked(const QString& in)
